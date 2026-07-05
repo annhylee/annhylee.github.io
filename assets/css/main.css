@@ -658,3 +658,11 @@
     height: 100%;
     object-fit: cover;
   }
+  .credential-value a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--gold-lt);
+    transition: color 0.2s;
+  }
+  .credential-value a:hover { color: var(--gold); }

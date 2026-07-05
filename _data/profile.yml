@@ -96,7 +96,9 @@ about:
         - 보이스 · 스피치 · 외국인 대상 한국어 강의
     - label: 유튜브 채널
       lines:
-        - HYEDLINE 혜드라인 (경제 · 외신 콘텐츠)
+        # text + url 형태로 쓰면 클릭 가능한 링크가 됩니다 (일반 문자열도 그대로 지원)
+        - text: HYEDLINE 혜드라인 (경제 · 외신 콘텐츠)
+          url: "https://youtube.com/@HYEDLINE"
     - label: 학력 / 자격
       lines:
         - 한양대학교 체육학 졸업
@@ -110,11 +112,6 @@ contact:
       href: "mailto:annhylee@naver.com"
       icon: "✉"
       external: false
-    - label: YouTube
-      value: HYEDLINE 혜드라인
-      href: "https://youtube.com/@HYEDLINE"
-      icon: "▶"
-      external: true
     - label: Instagram
       value: "@HYEDLINE"
       href: "https://www.instagram.com/hyedline_"

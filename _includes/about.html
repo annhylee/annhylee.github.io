@@ -15,7 +15,16 @@
       {%- for cred in site.data.profile.about.credentials %}
       <div class="credential-item">
         <div class="credential-label">{{ cred.label }}</div>
-        <div class="credential-value">{{ cred.lines | join: '<br>' }}</div>
+        <div class="credential-value">
+          {%- for line in cred.lines -%}
+            {%- if line.url -%}
+              <a href="{{ line.url }}" target="_blank" rel="noopener">{{ line.text }}</a>
+            {%- else -%}
+              {{ line }}
+            {%- endif -%}
+            {%- unless forloop.last -%}<br>{%- endunless -%}
+          {%- endfor -%}
+        </div>
       </div>
       {%- endfor %}
     </div>
