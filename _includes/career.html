@@ -1,0 +1,26 @@
+<!-- CAREER -->
+<section id="career">
+  <p class="section-eyebrow reveal">{{ site.data.profile.sections.career.eyebrow }}</p>
+  <h2 class="section-title reveal">{{ site.data.profile.sections.career.title | newline_to_br }}</h2>
+  <div class="timeline">
+    {%- for item in site.data.career %}
+    <div class="timeline-item reveal">
+      <div class="timeline-year">
+        {%- if item.year_from and item.year_to -%}
+          {{ item.year_from }} —<br>{{ item.year_to }}
+        {%- elsif item.year_from -%}
+          {{ item.year_from }} —
+        {%- else -%}
+          — {{ item.year_to }}
+        {%- endif -%}
+      </div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-org">{{ item.org }}</div>
+        <div class="timeline-role">{{ item.role }}</div>
+        <div class="timeline-desc">{{ item.desc }}</div>
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+</section>

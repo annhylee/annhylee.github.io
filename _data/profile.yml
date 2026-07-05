@@ -1,0 +1,125 @@
+# ──────────────────────────────────────────────
+# 사이트 전반의 내용을 담는 중심 파일입니다.
+# 이름, 히어로 문구, 연락처 등을 여기서 수정하세요.
+# ──────────────────────────────────────────────
+
+name: 이혜연
+name_en: Lee Hyeyeon
+
+# 히어로 큰 이름 — 한 줄씩 표시되고, 마지막 글자는 금색으로 강조됩니다
+name_lines:
+  - 이
+  - 혜연
+
+tagline: Anchor · MC · Reporter
+
+# 타이핑 애니메이션에 순서대로 나오는 문구들
+typed_titles:
+  - 경제 앵커 · 리포터
+  - 행사 MC · 사회자
+  - 콘텐츠 크리에이터
+  - 한국어 강사
+
+hero_desc: |-
+  9년간의 방송 현장에서 쌓아온 전문성으로
+  경제·시사·행사 전 영역을 아우릅니다.
+  정확하고 신뢰할 수 있는 목소리를 전달합니다.
+
+hero_cta:
+  - label: 포트폴리오 보기
+    href: "#portfolio"
+    style: primary
+  - label: 문의하기
+    href: "#contact"
+    style: outline
+
+# 프로필 사진 경로 — 빈 문자열("")이면 자리표시자 프레임이 표시됩니다.
+# 예: /assets/img/profile_red.jpg 또는 /assets/img/profile_white.jpg
+photo: ""
+
+stats:
+  - num: "9"
+    label: Years
+  - num: "4+"
+    label: Channels
+  - num: "∞"
+    label: Stories
+
+nav:
+  - label: About
+    href: "#about"
+  - label: Career
+    href: "#career"
+  - label: Portfolio
+    href: "#portfolio"
+  - label: Media
+    href: "#media"
+  - label: Contact
+    href: "#contact"
+
+# 각 섹션의 작은 라벨(eyebrow)과 제목
+sections:
+  about:
+    eyebrow: About
+    title: |-
+      말과 사람을 잇는
+      방송인입니다
+  career:
+    eyebrow: Career
+    title: 커리어 타임라인
+  portfolio:
+    eyebrow: Portfolio
+    title: 앵커 · MC 클립
+  media:
+    eyebrow: Media
+    title: 언론 · 미디어 커버리지
+  contact:
+    eyebrow: Contact
+    title: 함께 일해요
+
+about:
+  keywords:
+    - 경제 앵커
+    - MC
+    - 리포터
+    - 한국어 강사
+    - 콘텐츠 크리에이터
+    - 유통·소비재
+  credentials:
+    - label: 경력
+      lines:
+        - 방송 경력 9년
+        - 경제 리포터·앵커 (서울경제TV)
+    - label: 자격
+      lines:
+        - 한국어교원 자격증
+        - 투자자산운용사 (취득 예정)
+    - label: 채널
+      lines:
+        - HYEDLINE (경제 유튜브·인스타)
+        - onlyhyly (라이프스타일)
+    - label: 전문 분야
+      lines:
+        - 유통·소비재·경제 취재
+        - 기업 행사 MC·사회
+
+contact:
+  desc: 방송 프로그램, 기업 행사 MC, 유튜브 영상, 한국어 강의 등 다양한 분야에서 협업을 환영합니다. 아래 채널로 편하게 연락 주세요.
+  channels:
+    - label: Email
+      value: your@email.com
+      href: "mailto:your@email.com"
+      icon: "✉"
+      external: false
+    - label: YouTube
+      value: HYEDLINE (혜드라인)
+      href: "https://youtube.com/@HYEDLINE"
+      icon: "▶"
+      external: true
+    - label: Instagram
+      value: "@HYEDLINE"
+      href: "https://instagram.com/HYEDLINE"
+      icon: "◈"
+      external: true
+
+footer_copy: © 2026 Lee Hyeyeon. All rights reserved.

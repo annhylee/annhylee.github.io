@@ -1,0 +1,23 @@
+<!-- ABOUT -->
+<section id="about">
+  <p class="section-eyebrow reveal">{{ site.data.profile.sections.about.eyebrow }}</p>
+  <h2 class="section-title reveal">{{ site.data.profile.sections.about.title | newline_to_br }}</h2>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      {{ content }}
+      <div class="about-keywords">
+        {%- for kw in site.data.profile.about.keywords %}
+        <span class="keyword">{{ kw }}</span>
+        {%- endfor %}
+      </div>
+    </div>
+    <div class="about-credentials reveal">
+      {%- for cred in site.data.profile.about.credentials %}
+      <div class="credential-item">
+        <div class="credential-label">{{ cred.label }}</div>
+        <div class="credential-value">{{ cred.lines | join: '<br>' }}</div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

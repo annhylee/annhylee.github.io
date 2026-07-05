@@ -1,0 +1,36 @@
+<!-- CONTACT -->
+<section id="contact">
+  <p class="section-eyebrow reveal">{{ site.data.profile.sections.contact.eyebrow }}</p>
+  <h2 class="section-title reveal">{{ site.data.profile.sections.contact.title | newline_to_br }}</h2>
+  <div class="contact-grid">
+    <div class="reveal">
+      <p class="contact-desc">{{ site.data.profile.contact.desc }}</p>
+      <div class="contact-channels">
+        {%- for ch in site.data.profile.contact.channels %}
+        <a href="{{ ch.href }}"{% if ch.external %} target="_blank"{% endif %} class="contact-channel">
+          <div class="channel-icon">{{ ch.icon }}</div>
+          <div>
+            <span class="channel-label">{{ ch.label }}</span>
+            <span class="channel-value">{{ ch.value }}</span>
+          </div>
+        </a>
+        {%- endfor %}
+      </div>
+    </div>
+    <div class="contact-form reveal">
+      <div class="form-group">
+        <label class="form-label">이름 / 소속</label>
+        <input type="text" class="form-input" placeholder="홍길동 / OO방송국">
+      </div>
+      <div class="form-group">
+        <label class="form-label">이메일</label>
+        <input type="email" class="form-input" placeholder="hello@example.com">
+      </div>
+      <div class="form-group">
+        <label class="form-label">문의 내용</label>
+        <textarea class="form-textarea" placeholder="방송 출연, 행사 MC, 강의 의뢰 등 자유롭게 작성해 주세요."></textarea>
+      </div>
+      <button class="btn-submit">문의 보내기</button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,50 @@
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">{{ site.data.profile.tagline }}</p>
+    <h1 class="hero-name">
+      {%- for line in site.data.profile.name_lines -%}
+        {%- if forloop.last -%}
+          {%- assign head_len = line.size | minus: 1 -%}
+          {{- line | slice: 0, head_len -}}<span class="char-gold">{{- line | slice: -1, 1 -}}</span>
+        {%- else -%}
+          {{- line -}}<br>
+        {%- endif -%}
+      {%- endfor -%}
+    </h1>
+    <div class="hero-divider"></div>
+    <div class="hero-title-wrapper">
+      <span id="typed-title" data-titles='{{ site.data.profile.typed_titles | jsonify }}'></span><span class="cursor"></span>
+    </div>
+    <p class="hero-desc">
+      {{ site.data.profile.hero_desc | newline_to_br }}
+    </p>
+    <div class="hero-cta">
+      {%- for cta in site.data.profile.hero_cta %}
+      <a href="{{ cta.href }}" class="btn-{{ cta.style }}">{{ cta.label }}</a>
+      {%- endfor %}
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-photo-placeholder">
+      <div class="photo-frame">
+        {%- if site.data.profile.photo and site.data.profile.photo != "" %}
+        <img src="{{ site.data.profile.photo | relative_url }}" alt="{{ site.data.profile.name }} 프로필 사진">
+        {%- else %}
+        <div>
+          <div class="photo-icon">🎙️</div>
+          <p class="photo-label">Profile Photo</p>
+        </div>
+        {%- endif %}
+      </div>
+    </div>
+    <div class="hero-stats">
+      {%- for stat in site.data.profile.stats %}
+      <div class="stat">
+        <div class="stat-num">{{ stat.num }}</div>
+        <div class="stat-label">{{ stat.label }}</div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
