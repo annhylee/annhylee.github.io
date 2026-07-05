@@ -4,12 +4,7 @@
     <p class="hero-eyebrow">{{ site.data.profile.tagline }}</p>
     <h1 class="hero-name">
       {%- for line in site.data.profile.name_lines -%}
-        {%- if forloop.last -%}
-          {%- assign head_len = line.size | minus: 1 -%}
-          {{- line | slice: 0, head_len -}}<span class="char-gold">{{- line | slice: -1, 1 -}}</span>
-        {%- else -%}
-          {{- line -}}<br>
-        {%- endif -%}
+        {{- line -}}{%- unless forloop.last -%}<br>{%- endunless -%}
       {%- endfor -%}
     </h1>
     <div class="hero-divider"></div>

@@ -6,10 +6,9 @@
 name: 이혜연
 name_en: Lee Hyeyeon
 
-# 히어로 큰 이름 — 한 줄씩 표시되고, 마지막 글자는 금색으로 강조됩니다
+# 히어로 큰 이름 — 항목 하나가 한 줄로 표시됩니다 (여러 항목이면 줄바꿈)
 name_lines:
-  - 이
-  - 혜연
+  - 이혜연
 
 tagline: Anchor · MC · Reporter
 
