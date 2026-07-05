@@ -15,15 +15,15 @@
 
 {% include hero.html %}
 
-{% include about.html %}
+{% unless site.data.profile.sections.about.show == false %}{% include about.html %}{% endunless %}
 
-{% include career.html %}
+{% unless site.data.profile.sections.career.show == false %}{% include career.html %}{% endunless %}
 
-{% include portfolio.html %}
+{% unless site.data.profile.sections.portfolio.show == false %}{% include portfolio.html %}{% endunless %}
 
-{% include media.html %}
+{% unless site.data.profile.sections.media.show == false %}{% include media.html %}{% endunless %}
 
-{% include contact.html %}
+{% unless site.data.profile.sections.contact.show == false %}{% include contact.html %}{% endunless %}
 
 {% include footer.html %}
 

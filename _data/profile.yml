@@ -73,6 +73,8 @@ sections:
   media:
     eyebrow: Media
     title: 언론 · 미디어 커버리지
+    # 섹션 숨김 스위치 — 이 줄을 지우거나 true로 바꾸면 다시 표시됩니다 (내용은 media.yml에 보존)
+    show: false
   contact:
     eyebrow: Contact
     title: 함께 일해요
