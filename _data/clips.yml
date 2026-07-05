@@ -4,20 +4,20 @@
 # ──────────────────────────────────────────────
 
 items:
-  - tag: 뉴스 앵커
-    title: 서울경제TV 메인 뉴스 앵커
+  - tag: 서울경제TV
+    title: 방송기자 취재 · 출연
+    year: "2026"
+    url: "https://youtu.be/ez8xeIJZSAY?si=jOzD5HB_GTLuLtg-"
+
+  - tag: HD현대중공업
+    title: 프로그램 진행 · 인터뷰
     year: "2024"
-    url: ""
+    url: "https://youtu.be/sih2WJQHAcc?si=5mfFsb8lrXzpfd-o&t=10"
 
-  - tag: 리포트
-    title: 유통 산업 기획 리포트
-    year: "2023"
-    url: ""
-
-  - tag: 행사 MC
-    title: 기업 컨퍼런스 사회 진행
-    year: "2023"
-    url: ""
+  - tag: 법률방송
+    title: 생방송 의학 전문 MC
+    year: "2022"
+    url: "https://www.youtube.com/live/kYGFxUVlHr4?si=QKk13HRSverAAZ-k&t=35"
 
 # 목록 아래 점선 안내 문구 — 빈 문자열("")로 바꾸면 숨겨집니다
 notice: "+ 영상 클립 URL 연결 시 업데이트됩니다"
