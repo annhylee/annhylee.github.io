@@ -32,6 +32,8 @@
 url: "https://youtube.com/watch?v=..."
 ```
 
+유튜브 링크(`youtu.be/`, `watch?v=`, `/live/`, `/shorts/` 등)를 넣으면 카드에 썸네일이 자동으로 표시됩니다.
+
 **기사 링크 연결** — `_data/media.yml`에서도 같은 방식으로 `url`을 채우면 해당 줄이 클릭 가능해집니다.
 
 **이메일 교체** — `_data/profile.yml`의 `contact:` 아래 `your@email.com` 두 곳을 실제 주소로.

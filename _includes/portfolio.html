@@ -4,12 +4,28 @@
   <h2 class="section-title reveal">{{ site.data.profile.sections.portfolio.title | newline_to_br }}</h2>
   <div class="portfolio-grid">
     {%- for clip in site.data.clips.items %}
+    {%- comment -%} url에서 유튜브 영상 ID를 추출해 썸네일에 사용 {%- endcomment -%}
+    {%- assign video_id = "" -%}
+    {%- if clip.url contains "watch?v=" -%}
+      {%- assign video_id = clip.url | split: "watch?v=" | last | split: "&" | first | split: "?" | first -%}
+    {%- elsif clip.url contains "youtu.be/" -%}
+      {%- assign video_id = clip.url | split: "youtu.be/" | last | split: "?" | first -%}
+    {%- elsif clip.url contains "/live/" -%}
+      {%- assign video_id = clip.url | split: "/live/" | last | split: "?" | first -%}
+    {%- elsif clip.url contains "/shorts/" -%}
+      {%- assign video_id = clip.url | split: "/shorts/" | last | split: "?" | first -%}
+    {%- elsif clip.url contains "/embed/" -%}
+      {%- assign video_id = clip.url | split: "/embed/" | last | split: "?" | first -%}
+    {%- endif %}
     {%- if clip.url and clip.url != "" %}
     <a href="{{ clip.url }}" target="_blank" rel="noopener" class="video-card reveal">
     {%- else %}
     <div class="video-card reveal">
     {%- endif %}
       <div class="video-thumb">
+        {%- if video_id != "" %}
+        <img src="https://i.ytimg.com/vi/{{ video_id }}/hqdefault.jpg" alt="{{ clip.title }} 썸네일" loading="lazy">
+        {%- endif %}
         <div class="play-btn">
           <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
         </div>
