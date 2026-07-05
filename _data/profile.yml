@@ -35,7 +35,7 @@ hero_cta:
 
 # 프로필 사진 경로 — 빈 문자열("")이면 자리표시자 프레임이 표시됩니다.
 # 예: /assets/img/profile_red.jpg 또는 /assets/img/profile_white.jpg
-photo: ""
+photo: /assets/img/profile_red.jpg
 
 stats:
   - num: "9"
