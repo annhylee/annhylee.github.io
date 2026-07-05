@@ -62,7 +62,7 @@ sections:
   about:
     eyebrow: About
     title: |-
-      말과 사람을 잇는
+      목소리로 신뢰를 만드는
       방송인입니다
   career:
     eyebrow: Career
@@ -87,20 +87,19 @@ about:
   credentials:
     - label: 경력
       lines:
-        - 방송 경력 9년
         - 서울경제TV 방송기자
         - HD현대중공업 사내 아나운서
         - 충북 지역 방송국 아나운서
-    - label: 자격
+    - label: 전문 분야
       lines:
-        - 한국어교원자격증 2급
+        - 경제 · 산업 · 법조 취재 경험
+        - 기업 행사 MC · 사회자
     - label: 채널
       lines:
         - HYEDLINE 혜드라인 (경제 유튜브)
-    - label: 전문 분야
+    - label: 자격
       lines:
-        - 경제 · 산업 · 법조 취재
-        - 기업 행사 MC · 사회
+        - 한국어교원자격증 2급
 
 contact:
   desc: 생방송 프로그램, 기업 행사 MC, 유튜브 콘텐츠 등 다양한 분야에서 협업을 진행합니다. 편하게 연락 주세요.
