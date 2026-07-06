@@ -1,24 +1,24 @@
 <!-- CAREER -->
 <section id="career">
-  <p class="section-eyebrow reveal">{{ site.data.profile.sections.career.eyebrow }}</p>
-  <h2 class="section-title reveal">{{ site.data.profile.sections.career.title | newline_to_br }}</h2>
+  <p class="section-eyebrow reveal">{{ site.data.profile.sections.career.eyebrow | escape }}</p>
+  <h2 class="section-title reveal">{{ site.data.profile.sections.career.title | escape | newline_to_br }}</h2>
   <div class="timeline">
     {%- for item in site.data.career %}
     <div class="timeline-item reveal">
       <div class="timeline-year">
         {%- if item.year_from and item.year_to -%}
-          {{ item.year_from }} —<br>{{ item.year_to }}
+          {{ item.year_from | escape }} —<br>{{ item.year_to | escape }}
         {%- elsif item.year_from -%}
-          {{ item.year_from }} —
+          {{ item.year_from | escape }} —
         {%- else -%}
-          — {{ item.year_to }}
+          — {{ item.year_to | escape }}
         {%- endif -%}
       </div>
       <div class="timeline-dot"></div>
       <div class="timeline-content">
-        <div class="timeline-org">{{ item.org }}</div>
-        <div class="timeline-role">{{ item.role }}</div>
-        <div class="timeline-desc">{{ item.desc }}</div>
+        <div class="timeline-org">{{ item.org | escape }}</div>
+        <div class="timeline-role">{{ item.role | escape }}</div>
+        <div class="timeline-desc">{{ item.desc | escape }}</div>
       </div>
     </div>
     {%- endfor %}

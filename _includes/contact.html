@@ -1,17 +1,17 @@
 <!-- CONTACT -->
 <section id="contact">
-  <p class="section-eyebrow reveal">{{ site.data.profile.sections.contact.eyebrow }}</p>
-  <h2 class="section-title reveal">{{ site.data.profile.sections.contact.title | newline_to_br }}</h2>
+  <p class="section-eyebrow reveal">{{ site.data.profile.sections.contact.eyebrow | escape }}</p>
+  <h2 class="section-title reveal">{{ site.data.profile.sections.contact.title | escape | newline_to_br }}</h2>
   <div class="contact-grid">
     <div class="reveal">
-      <p class="contact-desc">{{ site.data.profile.contact.desc }}</p>
+      <p class="contact-desc">{{ site.data.profile.contact.desc | escape }}</p>
       <div class="contact-channels">
         {%- for ch in site.data.profile.contact.channels %}
         <a href="{{ ch.href }}"{% if ch.external %} target="_blank"{% endif %} class="contact-channel">
           <div class="channel-icon">{{ ch.icon }}</div>
           <div>
-            <span class="channel-label">{{ ch.label }}</span>
-            <span class="channel-value">{{ ch.value }}</span>
+            <span class="channel-label">{{ ch.label | escape }}</span>
+            <span class="channel-value">{{ ch.value | escape }}</span>
           </div>
         </a>
         {%- endfor %}

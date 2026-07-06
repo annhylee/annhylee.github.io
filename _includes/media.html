@@ -1,7 +1,7 @@
 <!-- MEDIA -->
 <section id="media">
-  <p class="section-eyebrow reveal">{{ site.data.profile.sections.media.eyebrow }}</p>
-  <h2 class="section-title reveal">{{ site.data.profile.sections.media.title | newline_to_br }}</h2>
+  <p class="section-eyebrow reveal">{{ site.data.profile.sections.media.eyebrow | escape }}</p>
+  <h2 class="section-title reveal">{{ site.data.profile.sections.media.title | escape | newline_to_br }}</h2>
   <div class="media-list">
     {%- for item in site.data.media.items %}
     {%- if item.url and item.url != "" %}
@@ -9,9 +9,9 @@
     {%- else %}
     <div class="media-item reveal">
     {%- endif %}
-      <div class="media-date">{{ item.date }}</div>
-      <div class="media-text">{{ item.text }}</div>
-      <div class="media-source">{{ item.source }}</div>
+      <div class="media-date">{{ item.date | escape }}</div>
+      <div class="media-text">{{ item.text | escape }}</div>
+      <div class="media-source">{{ item.source | escape }}</div>
     {%- if item.url and item.url != "" %}
     </a>
     {%- else %}
@@ -20,9 +20,9 @@
     {%- endfor %}
     {%- if site.data.media.placeholder %}
     <div class="media-item reveal">
-      <div class="media-date">{{ site.data.media.placeholder.date }}</div>
-      <div class="media-text media-text--muted">{{ site.data.media.placeholder.text }}</div>
-      <div class="media-source">{{ site.data.media.placeholder.source }}</div>
+      <div class="media-date">{{ site.data.media.placeholder.date | escape }}</div>
+      <div class="media-text media-text--muted">{{ site.data.media.placeholder.text | escape }}</div>
+      <div class="media-source">{{ site.data.media.placeholder.source | escape }}</div>
     </div>
     {%- endif %}
   </div>

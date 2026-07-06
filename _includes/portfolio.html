@@ -1,7 +1,7 @@
 <!-- PORTFOLIO -->
 <section id="portfolio">
-  <p class="section-eyebrow reveal">{{ site.data.profile.sections.portfolio.eyebrow }}</p>
-  <h2 class="section-title reveal">{{ site.data.profile.sections.portfolio.title | newline_to_br }}</h2>
+  <p class="section-eyebrow reveal">{{ site.data.profile.sections.portfolio.eyebrow | escape }}</p>
+  <h2 class="section-title reveal">{{ site.data.profile.sections.portfolio.title | escape | newline_to_br }}</h2>
   <div class="portfolio-grid">
     {%- for clip in site.data.clips.items %}
     {%- comment -%} url에서 유튜브 영상 ID를 추출해 썸네일에 사용 {%- endcomment -%}
@@ -24,15 +24,15 @@
     {%- endif %}
       <div class="video-thumb">
         {%- if video_id != "" %}
-        <img src="https://i.ytimg.com/vi/{{ video_id }}/hqdefault.jpg" alt="{{ clip.title }} 썸네일" loading="lazy">
+        <img src="https://i.ytimg.com/vi/{{ video_id }}/hqdefault.jpg" alt="{{ clip.title | escape }} 썸네일" loading="lazy">
         {%- endif %}
         <div class="play-btn">
           <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
         </div>
       </div>
-      <div class="video-tag">{{ clip.tag }}</div>
-      <div class="video-title">{{ clip.title }}</div>
-      <div class="video-date">{{ clip.year }}</div>
+      <div class="video-tag">{{ clip.tag | escape }}</div>
+      <div class="video-title">{{ clip.title | escape }}</div>
+      <div class="video-date">{{ clip.year | escape }}</div>
     {%- if clip.url and clip.url != "" %}
     </a>
     {%- else %}
@@ -41,7 +41,7 @@
     {%- endfor %}
     {%- if site.data.clips.notice and site.data.clips.notice != "" %}
     <div class="video-add-notice">
-      {{ site.data.clips.notice }}
+      {{ site.data.clips.notice | escape }}
     </div>
     {%- endif %}
   </div>

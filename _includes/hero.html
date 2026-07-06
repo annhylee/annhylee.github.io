@@ -1,10 +1,10 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-left">
-    <p class="hero-eyebrow">{{ site.data.profile.tagline }}</p>
+    <p class="hero-eyebrow">{{ site.data.profile.tagline | escape }}</p>
     <h1 class="hero-name">
       {%- for line in site.data.profile.name_lines -%}
-        {{- line -}}{%- unless forloop.last -%}<br>{%- endunless -%}
+        {{- line | escape -}}{%- unless forloop.last -%}<br>{%- endunless -%}
       {%- endfor -%}
     </h1>
     <div class="hero-divider"></div>
@@ -12,11 +12,11 @@
       <span id="typed-title" data-titles='{{ site.data.profile.typed_titles | jsonify }}'></span><span class="cursor"></span>
     </div>
     <p class="hero-desc">
-      {{ site.data.profile.hero_desc | newline_to_br }}
+      {{ site.data.profile.hero_desc | escape | newline_to_br }}
     </p>
     <div class="hero-cta">
       {%- for cta in site.data.profile.hero_cta %}
-      <a href="{{ cta.href }}" class="btn-{{ cta.style }}">{{ cta.label }}</a>
+      <a href="{{ cta.href }}" class="btn-{{ cta.style }}">{{ cta.label | escape }}</a>
       {%- endfor %}
     </div>
   </div>
@@ -24,7 +24,7 @@
     <div class="hero-photo-placeholder">
       <div class="photo-frame">
         {%- if site.data.profile.photo and site.data.profile.photo != "" %}
-        <img src="{{ site.data.profile.photo | relative_url }}" alt="{{ site.data.profile.name }} 프로필 사진">
+        <img src="{{ site.data.profile.photo | relative_url }}" alt="{{ site.data.profile.name | escape }} 프로필 사진">
         {%- else %}
         <div>
           <div class="photo-icon">🎙️</div>
@@ -36,8 +36,8 @@
     <div class="hero-stats">
       {%- for stat in site.data.profile.stats %}
       <div class="stat">
-        <div class="stat-num">{{ stat.num }}</div>
-        <div class="stat-label">{{ stat.label }}</div>
+        <div class="stat-num">{{ stat.num | escape }}</div>
+        <div class="stat-label">{{ stat.label | escape }}</div>
       </div>
       {%- endfor %}
     </div>
