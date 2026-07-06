@@ -94,21 +94,21 @@ about:
         - 아나운서 - HD현대중공업 · 충북방송
     - label: 전문 분야
       lines:
-        - 경제 · 법조 · 의학 분야 진행 경험
+        - 경제 · 법조 · 의학 프로그램 진행 경험
         - 생방송 · 인터뷰 MC · 기업 및 지역 행사
         - 보이스 · 스피치 · 외국인 대상 한국어 강의
-    - label: 유튜브 채널
+    - label: SNS 채널
       lines:
         # 참고: "- text: ... / url: ..." 형태로 쓰면 클릭 가능한 링크로 표시됩니다
-        - HYEDLINE 혜드라인 (경제 · 외신 콘텐츠)
+        - 유튜브 HYEDLINE 혜드라인 (경제 · 외신 콘텐츠)
     - label: 학력 / 자격
       lines:
-        - 한양대학교 체육학과 졸업
-        - 한국어교원자격 2급
+        - 한양대학교 체육학과 졸업 (2019.02 졸업)
+        - 한국어교원자격 2급 (문화체육관광부 발급)
         - 스피치지도사 1급 · 커뮤니케이션전문가 1급
 
 contact:
-  desc: 생방송 프로그램, 기업 행사 MC, 유튜브 콘텐츠 등 다양한 분야에서 협업을 진행합니다. 편하게 연락 주세요.
+  desc: 방송 프로그램, 기업 행사, 유튜브 콘텐츠 등 다양한 분야에서 협업을 진행합니다. 편하게 연락 주세요.
   channels:
     - label: Email
       value: annhylee@naver.com
@@ -123,7 +123,7 @@ contact:
     - label: Instagram
       value: "@hyedline_"
       href: "https://www.instagram.com/hyedline_"
-      icon: "🖤"
+      icon: "🤍"
       external: true
 
 footer_copy: © 2026 Lee Hyeyeon. All rights reserved.
