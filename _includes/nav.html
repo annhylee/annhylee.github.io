@@ -1,6 +1,6 @@
 <!-- NAV -->
 <nav id="navbar">
-  <a class="nav-logo" href="#hero">{{ site.data.profile.name | escape }}<span>.</span></a>
+  <a class="nav-logo" href="#hero">{{ site.data.profile.name_en | escape }}</a>
   <ul class="nav-links">
     {%- for link in site.data.profile.nav %}
     {%- assign section_key = link.href | remove: "#" -%}
