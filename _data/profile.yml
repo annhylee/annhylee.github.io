@@ -111,17 +111,17 @@ contact:
     - label: Email
       value: annhylee@naver.com
       href: "mailto:annhylee@naver.com"
-      icon: "✉"
+      icon: "✉️"
       external: true
     - label: YouTube
       value: HYEDLINE 혜드라인
       href: "https://youtube.com/@HYEDLINE"
-      icon: "▶"
+      icon: "🎬"
       external: true
     - label: Instagram
-      value: "@HYEDLINE"
+      value: "@hyedline_"
       href: "https://www.instagram.com/hyedline_"
-      icon: "⦿"
+      icon: "💜"
       external: true
 
 footer_copy: © 2026 Lee Hyeyeon. All rights reserved.
