@@ -31,6 +31,25 @@ function type() {
 }
 setTimeout(type, 1600);
 
+// Contact form — opens the visitor's mail app with the fields prefilled
+const contactForm = document.querySelector('.contact-form');
+if (contactForm && contactForm.dataset.email) {
+  contactForm.querySelector('.btn-submit').addEventListener('click', () => {
+    const name = document.getElementById('contact-name').value.trim();
+    const email = document.getElementById('contact-email').value.trim();
+    const message = document.getElementById('contact-message').value.trim();
+    const subject = '[홈페이지 문의] ' + (name || '이름 미기재');
+    const lines = [];
+    if (name) lines.push('이름/소속: ' + name);
+    if (email) lines.push('회신 이메일: ' + email);
+    if (lines.length) lines.push('');
+    lines.push(message);
+    window.location.href = 'mailto:' + contactForm.dataset.email +
+      '?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(lines.join('\n'));
+  });
+}
+
 // Scroll reveal
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {

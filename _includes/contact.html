@@ -17,20 +17,21 @@
         {%- endfor %}
       </div>
     </div>
-    <div class="contact-form reveal">
+    {%- assign email_channel = site.data.profile.contact.channels | where: "label", "Email" | first %}
+    <div class="contact-form reveal" data-email="{{ email_channel.value }}">
       <div class="form-group">
         <label class="form-label">이름 / 소속</label>
-        <input type="text" class="form-input" placeholder="홍길동 / OO방송국">
+        <input type="text" class="form-input" id="contact-name" placeholder="홍길동 / OO방송국">
       </div>
       <div class="form-group">
         <label class="form-label">이메일</label>
-        <input type="email" class="form-input" placeholder="hello@example.com">
+        <input type="email" class="form-input" id="contact-email" placeholder="hello@example.com">
       </div>
       <div class="form-group">
         <label class="form-label">문의 내용</label>
-        <textarea class="form-textarea" placeholder="방송 출연, 행사 MC, 강의 의뢰 등 자유롭게 작성해 주세요."></textarea>
+        <textarea class="form-textarea" id="contact-message" placeholder="방송 출연, 행사 MC, 강의 의뢰 등 자유롭게 작성해 주세요."></textarea>
       </div>
-      <button class="btn-submit">문의 보내기</button>
+      <button class="btn-submit" type="button">문의 보내기</button>
     </div>
   </div>
 </section>
