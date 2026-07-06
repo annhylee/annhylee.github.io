@@ -4,7 +4,7 @@
 # ──────────────────────────────────────────────
 
 name: 이혜연
-name_en: Lee Hyeyeon
+name_en: Hyeyeon Lee
 
 # 히어로 큰 이름 — 항목 하나가 한 줄로 표시됩니다 (여러 항목이면 줄바꿈)
 name_lines:
@@ -125,4 +125,4 @@ contact:
       icon: "🤍"
       external: true
 
-footer_copy: © 2026 Lee Hyeyeon. All rights reserved.
+footer_copy: © 2026 Hyeyeon Lee. All rights reserved.
