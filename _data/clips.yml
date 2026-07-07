@@ -37,4 +37,4 @@ items:
     url: "https://www.youtube.com/live/kYGFxUVlHr4?si=QKk13HRSverAAZ-k&t=35"
 
 # 목록 아래 점선 안내 문구 — 빈 문자열("")로 바꾸면 숨겨집니다
-notice: "+ 영상 클립 URL 연결 시 업데이트됩니다"
+notice: ""
