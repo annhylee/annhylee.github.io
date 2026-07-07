@@ -692,7 +692,15 @@
     nav.menu-open .nav-links a { transform: translateY(0); }
     #hero { grid-template-columns: 1fr; min-height: auto; }
     .hero-left { padding: 100px 24px 60px; }
-    .hero-right { display: none; }
+    .hero-right {
+      padding: 56px 24px 64px;
+      flex-direction: column;
+    }
+    .hero-photo-placeholder { height: auto; }
+    .hero-stats {
+      position: static;
+      margin-top: 44px;
+    }
     section { padding: 72px 24px; }
     .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
     .portfolio-grid { grid-template-columns: 1fr 1fr; }
