@@ -41,7 +41,7 @@
     box-shadow: 0 2px 24px rgba(13,27,42,0.06);
   }
   .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Garamond', 'Noto Serif KR', serif;
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 0.08em;
@@ -91,7 +91,7 @@
     animation: fadeUp 0.8s ease forwards 0.2s;
   }
   .hero-name {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Garamond', 'Noto Serif KR', serif;
     font-size: clamp(64px, 8vw, 108px);
     font-weight: 300;
     line-height: 1.0;
@@ -235,7 +235,7 @@
   }
   .stat { text-align: center; }
   .stat-num {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Garamond', 'Noto Serif KR', serif;
     font-size: 36px;
     font-weight: 300;
     color: var(--navy);
@@ -261,7 +261,7 @@
     margin-bottom: 16px;
   }
   .section-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Garamond', 'Noto Serif KR', serif;
     font-size: clamp(36px, 4vw, 52px);
     font-weight: 300;
     color: var(--navy);
@@ -369,7 +369,7 @@
     margin-bottom: 6px;
   }
   .timeline-role {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Garamond', 'Noto Serif KR', serif;
     font-size: 22px;
     font-weight: 400;
     color: var(--navy);
@@ -584,7 +584,7 @@
     align-items: center;
   }
   .footer-logo {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Garamond', 'Noto Serif KR', serif;
     font-size: 16px;
     font-weight: 300;
     color: rgba(255,255,255,0.35);
