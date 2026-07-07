@@ -86,7 +86,6 @@ about:
     - 방송기자 · 리포터
     - 스피치 · 한국어 강사
     - 콘텐츠 크리에이터
-  show: false
   credentials:
     - label: 경력
       lines:
@@ -100,7 +99,7 @@ about:
     - label: SNS 채널
       lines:
         # 참고: "- text: ... / url: ..." 형태로 쓰면 클릭 가능한 링크로 표시됩니다
-        - 유튜브 HYEDLINE 혜드라인 (경제 · 외신 콘텐츠)
+        - 유튜브 혜드라인(Hyedline) 경제 · 외신 콘텐츠
     - label: 학력 / 자격
       lines:
         - 한양대학교 체육학과 졸업 (2019.02 졸업)
@@ -116,7 +115,7 @@ contact:
       icon: "✉️"
       external: true
     - label: YouTube
-      value: HYEDLINE 혜드라인
+      value: 혜드라인 HYEDLINE
       href: "https://youtube.com/@HYEDLINE"
       icon: "🎬"
       external: true
