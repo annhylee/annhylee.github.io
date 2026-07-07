@@ -1,13 +1,19 @@
 <!-- NAV -->
 <nav id="navbar">
   <a class="nav-logo" href="#hero">{{ site.data.profile.name_en | escape }}</a>
-  <ul class="nav-links">
-    {%- for link in site.data.profile.nav %}
-    {%- assign section_key = link.href | remove: "#" -%}
-    {%- assign section_cfg = site.data.profile.sections[section_key] -%}
-    {%- unless section_cfg.show == false %}
-    <li><a href="{{ link.href }}">{{ link.label | escape }}</a></li>
-    {%- endunless %}
-    {%- endfor %}
-  </ul>
+  <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav-menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-menu" id="nav-menu">
+    <p class="nav-menu-eyebrow">Menu</p>
+    <ul class="nav-links">
+      {%- for link in site.data.profile.nav %}
+      {%- assign section_key = link.href | remove: "#" -%}
+      {%- assign section_cfg = site.data.profile.sections[section_key] -%}
+      {%- unless section_cfg.show == false %}
+      <li><a href="{{ link.href }}">{{ link.label | escape }}</a></li>
+      {%- endunless %}
+      {%- endfor %}
+    </ul>
+  </div>
 </nav>

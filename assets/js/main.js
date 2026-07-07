@@ -4,6 +4,23 @@ window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 20);
 });
 
+// Mobile nav (hamburger)
+const navToggle = document.querySelector('.nav-toggle');
+const setMenu = (open) => {
+  navbar.classList.toggle('menu-open', open);
+  navToggle.classList.toggle('open', open);
+  document.body.classList.toggle('nav-open', open);
+  navToggle.setAttribute('aria-expanded', String(open));
+  navToggle.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+};
+navToggle.addEventListener('click', () => setMenu(!navbar.classList.contains('menu-open')));
+document.querySelectorAll('.nav-links a').forEach((a) => {
+  a.addEventListener('click', () => setMenu(false));
+});
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') setMenu(false);
+});
+
 // Typing animation — titles come from _data/profile.yml via data-titles attribute
 const el = document.getElementById('typed-title');
 const titles = JSON.parse(el.dataset.titles);

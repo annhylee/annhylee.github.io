@@ -64,6 +64,32 @@
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--gold); }
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    margin: -8px -10px -8px 0;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 20px;
+    height: 1px;
+    background: var(--navy);
+    transition: transform 0.25s, opacity 0.2s;
+  }
+  .nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+  .nav-menu-eyebrow { display: none; }
+  body.nav-open { overflow: hidden; }
 
   /* ── HERO ── */
   #hero {
@@ -618,8 +644,52 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
-    nav { padding: 18px 24px; }
-    .nav-links { gap: 20px; }
+    nav { padding: 14px 20px; }
+    .nav-toggle { display: flex; }
+    /* nav의 backdrop-filter가 fixed 자손의 기준이 되므로 absolute + top:100%로 배치 */
+    .nav-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: var(--sand);
+      padding: 36px 24px 60px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s;
+    }
+    nav.menu-open .nav-menu { opacity: 1; visibility: visible; }
+    nav.menu-open {
+      background: var(--sand);
+      backdrop-filter: none;
+      border-color: transparent;
+      box-shadow: none;
+    }
+    .nav-menu-eyebrow {
+      display: block;
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .nav-links { flex-direction: column; gap: 0; }
+    .nav-links a {
+      display: block;
+      font-family: 'Cormorant Garamond', 'Noto Serif KR', serif;
+      font-size: 32px;
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      text-transform: none;
+      color: var(--navy);
+      padding: 12px 0;
+      border-bottom: 1px solid var(--sand2);
+      transform: translateY(8px);
+      transition: transform 0.35s ease, color 0.2s;
+    }
+    nav.menu-open .nav-links a { transform: translateY(0); }
     #hero { grid-template-columns: 1fr; min-height: auto; }
     .hero-left { padding: 100px 24px 60px; }
     .hero-right { display: none; }
