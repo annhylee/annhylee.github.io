@@ -237,8 +237,9 @@
     z-index: -1;
   }
   @media (min-width: 901px) {
+    .hero-photo-placeholder { padding-bottom: 90px; }
     .photo-frame {
-      width: min(26vw, 380px, 37vh);
+      width: min(28vw, 420px, 42vh);
       height: auto;
       aspect-ratio: 1066 / 1600;
     }
