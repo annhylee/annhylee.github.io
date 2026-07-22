@@ -48,8 +48,8 @@ stats:
 nav:
   - label: Skills
     href: "#skills"
-  - label: About
-    href: "#about"
+  - label: Story
+    href: "#story"
   - label: Career
     href: "#career"
   - label: Portfolio
@@ -64,8 +64,8 @@ sections:
   skills:
     eyebrow: Skills
     title: 전문 분야
-  about:
-    eyebrow: About
+  story:
+    eyebrow: Story
     title: |-
       전문 지식을 바탕으로
       신뢰를 만듭니다
@@ -109,7 +109,7 @@ skills:
       - 경제·산업 분야 전문성 보유
       - 예상치 못한 돌발 상황 대처 능력
 
-about:
+story:
   keywords:
     - 아나운서 · 뉴스 앵커
     - 생방송 MC · 행사 사회

@@ -238,10 +238,9 @@
   }
   @media (min-width: 901px) {
     .photo-frame {
-      width: min(26vw, 380px);
+      width: min(26vw, 380px, 37vh);
       height: auto;
-      aspect-ratio: 260 / 340;
-      max-height: 56vh;
+      aspect-ratio: 1066 / 1600;
     }
   }
   .photo-icon {
@@ -353,21 +352,21 @@
     color: var(--gold);
   }
 
-  /* ── ABOUT ── */
-  #about { background: var(--white); }
-  .about-grid {
+  /* ── STORY ── */
+  #story { background: var(--white); }
+  .story-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: start;
   }
-  .about-text p {
+  .story-text p {
     font-size: 15px;
     color: var(--text);
     line-height: 1.9;
     margin-bottom: 20px;
   }
-  .about-keywords {
+  .story-keywords {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -381,7 +380,7 @@
     letter-spacing: 0.1em;
     color: var(--navy60);
   }
-  .about-credentials { display: flex; flex-direction: column; gap: 24px; }
+  .story-credentials { display: flex; flex-direction: column; gap: 24px; }
   .credential-item {
     padding: 24px 28px;
     background: var(--sand);
@@ -761,7 +760,7 @@
     }
     section { padding: 72px 24px; }
     .skills-grid { grid-template-columns: 1fr; gap: 20px; }
-    .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .story-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
     .portfolio-grid { grid-template-columns: 1fr 1fr; }
     .timeline::before { left: 70px; }
     .timeline-item { grid-template-columns: 70px 1fr; gap: 24px; }
