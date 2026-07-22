@@ -303,6 +303,56 @@
     margin-bottom: 56px;
   }
 
+  /* ── SKILLS ── */
+  #skills { background: var(--white); }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  .skill-card {
+    border: 1px solid var(--sand2);
+    background: var(--white);
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 22px;
+    align-items: start;
+  }
+  .skill-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--sand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+  }
+  .skill-title {
+    font-family: 'Cormorant Garamond', 'Noto Serif KR', serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+  .skill-points { list-style: none; }
+  .skill-points li {
+    font-size: 13px;
+    color: var(--navy60);
+    line-height: 1.75;
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 7px;
+  }
+  .skill-points li:last-child { margin-bottom: 0; }
+  .skill-points li::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+
   /* ── ABOUT ── */
   #about { background: var(--white); }
   .about-grid {
@@ -710,6 +760,7 @@
       margin-top: 44px;
     }
     section { padding: 72px 24px; }
+    .skills-grid { grid-template-columns: 1fr; gap: 20px; }
     .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
     .portfolio-grid { grid-template-columns: 1fr 1fr; }
     .timeline::before { left: 70px; }
@@ -723,6 +774,9 @@
     .portfolio-grid { grid-template-columns: 1fr; }
     .hero-cta { flex-direction: column; }
     .hero-stats { gap: 24px; }
+    .skill-card { padding: 24px; grid-template-columns: 48px 1fr; gap: 16px; }
+    .skill-icon { width: 48px; height: 48px; }
+    .skill-icon svg { width: 22px; height: 22px; }
   }
 
   /* ── JEKYLL RESTRUCTURE ADDITIONS ── */

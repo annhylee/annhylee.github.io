@@ -46,6 +46,8 @@ stats:
     label: Stories
 
 nav:
+  - label: Skills
+    href: "#skills"
   - label: About
     href: "#about"
   - label: Career
@@ -59,6 +61,9 @@ nav:
 
 # 각 섹션의 작은 라벨(eyebrow)과 제목
 sections:
+  skills:
+    eyebrow: Skills
+    title: 전문 분야
   about:
     eyebrow: About
     title: |-
@@ -78,6 +83,31 @@ sections:
   contact:
     eyebrow: Contact
     title: 함께 일해요
+
+# Skills 섹션 카드 — icon은 broadcast / mic / script / megaphone 중 선택
+skills:
+  - icon: broadcast
+    title: 생방송 뉴스
+    points:
+      - 돌발 상황에도 차분하게 진행
+      - 다수의 뉴스·전문 정보 프로그램 생방송 진행 경험
+  - icon: mic
+    title: 인터뷰 / 대담
+    points:
+      - 인터뷰 대상과의 편안한 진행
+      - 사전 리서치를 바탕으로 질문 구성
+      - 자연스러운 흐름을 이어가는 순발력
+  - icon: script
+    title: 기사 / 원고 작성
+    points:
+      - 앵커·리포팅 멘트 작성 능력 보유
+      - 경제·시사·문화 등 다양한 장르의 프로그램 원고 작성 경험
+  - icon: megaphone
+    title: 행사 MC
+    points:
+      - 현장 분위기에 맞는 진행
+      - 경제·산업 분야 전문성 보유
+      - 예상치 못한 돌발 상황 대처 능력
 
 about:
   keywords:
