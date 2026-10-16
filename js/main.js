@@ -228,6 +228,26 @@
     });
   }
 
+
+  /* ---------- 스크롤 모션: 화면에 들어오는 요소를 아래에서 위로 나타나게 ---------- */
+  function motion() {
+    if (!('IntersectionObserver' in window)) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var sel = ['.hero .wrap > *', '.fact', '.sec-head', '.filters', '.svc', '.now-card', '.clip', '.row', '.creds > div', '.contact .wrap > *'];
+    var els = [].slice.call(document.querySelectorAll(sel.join(',')));
+    var io = new IntersectionObserver(function (entries) {
+      var n = 0;
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.style.transitionDelay = Math.min(n++ * 0.09, 0.45) + 's';
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.1 });
+    document.documentElement.classList.add('reveal-ready');
+    els.forEach(function (el) { el.classList.add('rv'); io.observe(el); });
+  }
+
   /* ---------- 실행 ---------- */
   function load(name) {
     return fetch('content/' + name + '.md', { cache: 'no-cache' }).then(function (r) {
@@ -254,6 +274,7 @@
         ]);
       },
       bindFilters,
+      motion,
       function () { $('footer').innerHTML = '© ' + new Date().getFullYear() + ' ' + fmt(plain(val(c.hero, '이름'))) + ' ' + fmt(val(c.hero, '영문이름')); }
     ];
     steps.forEach(function (fn) {
