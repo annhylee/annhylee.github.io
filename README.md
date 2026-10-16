@@ -1,67 +1,65 @@
-# annhylee.github.io
+# 이혜연 포트폴리오 사이트 수정 가이드
 
-이혜연 포트폴리오 사이트. [Jekyll](https://jekyllrb.com/) 구조로 되어 있어 **내용과 디자인이 분리**되어 있습니다. GitHub에 push하면 자동으로 빌드·배포됩니다 (별도 설정 불필요).
+## 폴더 구성
 
-## 내용 수정하는 법
+| 위치 | 내용 | 직접 고치나요? |
+|---|---|---|
+| `content/` | 화면에 보이는 모든 글과 링크 | **네, 여기만 고치면 됩니다** |
+| `assets/img/` | 프로필 사진 등 이미지 | 사진 바꿀 때만 |
+| `index.html` | 화면 뼈대 + 공유 미리보기 문구(맨 위) | 미리보기 문구만 |
+| `css/`, `js/` | 디자인과 동작 코드 | 건드리지 마세요 |
 
-디자인은 건드릴 필요 없이, 아래 파일들만 수정하면 됩니다. github.com에서 파일을 열고 연필 아이콘(✏️)으로 직접 편집해도 자동 반영됩니다 (반영까지 1~10분).
+## content 폴더 파일별 역할
 
-| 수정할 내용 | 파일 |
+| 파일 | 화면 위치 |
 |---|---|
-| 자기소개 문단 (About) | `index.md` |
-| 이름, 타이핑 문구, 히어로 소개, 연락처, 자격/경력 카드 | `_data/profile.yml` |
-| 커리어 타임라인 | `_data/career.yml` |
-| 앵커·MC 클립 카드 | `_data/clips.yml` |
-| 언론 커버리지 목록 | `_data/media.yml` |
-| 프로필 사진 교체 | `_data/profile.yml`의 `photo:` 값 |
+| `hero.md` | 첫 화면 (이름, 직함, 소개, 사진, 이력서 링크) |
+| `facts.md` | 첫 화면 아래 숫자 띠 |
+| `services.md` | 전문 분야 카드 |
+| `now.md` | 현재 활동 |
+| `videos.md` | 출연 영상 |
+| `career.md` | 주요 경력 (기사 링크 포함) |
+| `credentials.md` | 자격증 · 학력 |
+| `contact.md` | 문의 (이메일, SNS, 문의 폼) |
 
-### 자주 하는 수정 예시
+## 쓰는 규칙 (이것만 지키면 코드가 꼬이지 않아요)
 
-**커리어 항목 추가** — `_data/career.yml` 맨 위에:
-
-```yaml
-- year_from: "2027"
-  org: 새 소속
-  role: 새 역할
-  desc: 설명 문장.
+```
+# 섹션 제목
+## 항목 제목          ← 카드나 영상, 경력 하나가 여기서 시작
+키: 값               ← 콜론(:) 왼쪽 단어는 바꾸지 마세요
+- 목록 한 줄
 ```
 
-**클립에 영상 연결** — `_data/clips.yml`에서 `url: ""`을 실제 주소로:
+- **줄바꿈**: 바꾸고 싶은 자리에 `<br>`
+- **강조**: `**강조할 글자**`
+- **항목 추가**: 비슷한 블록을 통째로 복사해서 붙여넣고 글만 바꾸기
+- **항목 삭제**: `## 제목`부터 다음 `##` 전까지 통째로 지우기
+- **링크를 비워두면** 해당 버튼은 자동으로 숨겨집니다 (이력서, 기사 보기)
+- `<!-- -->` 사이의 글은 메모라서 화면에 안 나옵니다
+- 파일 이름은 바꾸지 마세요
 
-```yaml
-url: "https://youtube.com/watch?v=..."
-```
+## 깃허브에서 고치는 방법
 
-유튜브 링크(`youtu.be/`, `watch?v=`, `/live/`, `/shorts/` 등)를 넣으면 카드에 썸네일이 자동으로 표시됩니다.
+1. 저장소에서 `content` 폴더 → 고칠 파일 클릭
+2. 오른쪽 위 연필 아이콘(Edit) 클릭
+3. 글 수정 후 `Commit changes` 클릭
+4. 1~2분 뒤 https://annhylee.github.io 에서 새로고침 (안 바뀌면 Ctrl+Shift+R / Cmd+Shift+R)
 
-**기사 링크 연결** — `_data/media.yml`에서도 같은 방식으로 `url`을 채우면 해당 줄이 클릭 가능해집니다.
+> 내 컴퓨터에서 index.html을 더블클릭해서 열면 "내용 파일을 불러오지 못했습니다"가 뜹니다.
+> 정상이에요. 확인은 깃허브에 올린 주소에서 하세요.
 
-**이메일 교체** — `_data/profile.yml`의 `contact:` 아래 `your@email.com` 두 곳을 실제 주소로.
+## 문의 폼을 메일로 받으려면 (Formspree)
 
-### 주의사항
+1. https://formspree.io 에서 가입 → New Form 만들기
+2. 받는 메일을 annhylee@naver.com 으로 설정
+3. 나오는 주소(`https://formspree.io/f/xxxxxxx`)를 `contact.md`의 `폼주소:` 뒤에 붙여넣기
+4. 사이트에서 처음 한 번 테스트 문의를 보내고, 메일로 온 확인 링크를 눌러 활성화
 
-- YAML에서 값에 `:` 뒤 공백, `#`, 맨 앞 `@`/`+` 등이 들어가면 따옴표로 감싸주세요: `value: "@HYEDLINE"`
-- 내용에 `{{` 또는 `{%` 문자는 쓰지 마세요 (템플릿 문법으로 해석됨).
-- `<뉴스5>`, `<HHBS>` 같은 꺾쇠 표기는 그대로 화면에 표시됩니다 (자동 이스케이프 처리).
+폼주소가 비어 있으면 '문의 보내기'를 눌렀을 때 방문자의 메일 앱이 열려요.
 
-## 디자인 수정하는 법
+## 프로필 사진 바꾸기
 
-| 수정할 부분 | 파일 |
-|---|---|
-| 색상, 글꼴, 간격 등 스타일 전체 | `assets/css/main.css` (맨 위 `:root` 변수에 색상 정의) |
-| 페이지 뼈대, 섹션 순서 | `_layouts/default.html` |
-| 각 섹션의 HTML 구조 | `_includes/*.html` |
-| 애니메이션 동작 | `assets/js/main.js` |
-
-## 로컬 미리보기 (선택)
-
-필수는 아닙니다 — push하면 GitHub가 알아서 빌드합니다. 로컬에서 미리 보고 싶다면:
-
-```bash
-sudo apt install ruby-full build-essential zlib1g-dev
-gem install bundler
-echo 'source "https://rubygems.org"
-gem "github-pages", group: :jekyll_plugins' > Gemfile
-bundle install
-bundle exec jekyll serve   # http://localhost:4000
-```
+1. `assets/img` 폴더에서 `Add file` → `Upload files`로 사진 올리기 (세로 4:5 비율 권장)
+2. `hero.md`의 `사진:` 뒤 파일 이름을 올린 파일 이름으로 바꾸기
+3. 카카오톡 공유 미리보기 사진도 바꾸려면 `index.html` 맨 위 `og:image` 주소도 같이 바꾸기
