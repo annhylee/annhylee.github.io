@@ -12,8 +12,8 @@
 이메일: annhylee@naver.com
 유튜브: https://youtube.com/@HYEDLINE
 유튜브이름: YouTube 혜드라인
-인스타그램: https://www.instagram.com/hyedline_
-인스타그램이름: Instagram @hyedline_
+인스타그램: https://www.instagram.com/hyedline/
+인스타그램이름: Instagram @hyedline
 폼주소: 
 - 방송 출연
 - 채용 제안
