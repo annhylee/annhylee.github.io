@@ -32,7 +32,7 @@
 분류: 경제 해설
 링크: https://youtu.be/g-n6Vk50I5E
 
-## 직무 인터뷰 '하이잡스' 진행
+## 직무 인터뷰 'HHI-잡스' MC
 정보: 2024 · HD현대중공업
 분류: 방송 · 행사 진행
 링크: https://youtu.be/9oEcVe2R9Yw
