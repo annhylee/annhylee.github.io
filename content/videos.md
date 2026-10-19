@@ -41,13 +41,3 @@
 정보: 2024 · HD현대중공업
 분류: 내레이션
 링크: https://youtu.be/umEZCZCs6xU
-
-## 다큐멘터리 성우
-정보: 2024 · HD현대중공업
-분류: 내레이션
-링크: https://youtu.be/cPXfMhaBB1s?t=35
-
-## 생방송 의학 '바이러스 깨기' MC
-정보: 2022 · 법률방송
-분류: 방송 · 행사 진행
-링크: https://youtu.be/ZKmZtmLpA70
