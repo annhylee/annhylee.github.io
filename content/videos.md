@@ -17,10 +17,15 @@
 분류: 리포팅 · 앵커
 링크: https://youtu.be/cZv89k58Lho
 
-## 100만 유튜브 ETF 전문가 출연
+## 100만 유튜브 전문가 출연
 정보: 2026 · 부티플
 분류: 경제 해설
 링크: https://youtu.be/8wQrxJAM-WY
+
+## 경제 유튜브 고정 출연
+정보: 2026 · 원픽리포트
+분류: 경제 해설
+링크: https://youtu.be/uzBuQHwjjzk?si=ni9SQmf1TTBaprAw
 
 ## 국제 블록체인 행사 한·영 MC
 정보: 2026 · 블록페스타
