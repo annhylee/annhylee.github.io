@@ -18,12 +18,12 @@
 링크: https://youtu.be/cZv89k58Lho
 
 ## 100만 유튜브 <부티풀> 전문가 출연
-정보: 2026 · 유튜브
+정보: 2026 · 부티풀
 분류: 경제 해설
 링크: https://youtu.be/8wQrxJAM-WY
 
 ## 경제 유튜브 <원픽리포트> 고정 출연
-정보: 2026 · 유튜브
+정보: 2026 · 원픽리포트
 분류: 경제 해설
 링크: https://youtu.be/uzBuQHwjjzk?si=ni9SQmf1TTBaprAw
 
@@ -47,7 +47,7 @@
 분류: 내레이션
 링크: https://youtu.be/umEZCZCs6xU
 
-## 팟캐스트 <머니슬립>
+## 경제 이야기 팟캐스트 <머니슬립>
 정보: 2026 · 혜드라인
 분류: 내레이션
 링크: https://youtu.be/EMghVf80AT4?si=GlfLPRbutZWM8abw
