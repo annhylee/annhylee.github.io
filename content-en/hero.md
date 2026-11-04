@@ -5,8 +5,8 @@
 
 이름: Hyeyeon Lee
 영문이름: 이혜연
-직함: **Economics** Broadcaster & Event Host
-소개: I started as a live news anchor and have spent nine years reporting and hosting across business, law and health.<br>**I turn complex numbers and jargon into words every viewer understands.**
+직함: **Economics** Broadcaster & Event MC
+소개: From hosting corporate events to executive speech coaching and economic content —<br><br>**I make complex messages clear, simple and accurate.**
 사진: assets/img/profile_2026.JPG
 영상버튼: Watch my work →
 이력서버튼: View résumé ↗

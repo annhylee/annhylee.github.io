@@ -7,27 +7,32 @@
 영문: Work
 메뉴: Work
 
-## Industry news report, on location and in studio
+## Industry reports and live appearances on <News 5>
 정보: 2026 · SEN TV
 분류: Reporting & anchoring
 링크: https://youtu.be/cZv89k58Lho
 
-## Guest ETF expert on a 1M-subscriber channel
+## Guest expert on a 1M-subscriber finance YouTube channel
 정보: 2026 · Finance YouTube
 분류: Economic commentary
 링크: https://youtu.be/8wQrxJAM-WY
 
-## Lead bilingual MC at an international blockchain event
+## Regular guest on the finance YouTube show <OnePick Report>
+정보: 2026 · OnePick Report
+분류: Economic commentary
+링크: https://youtu.be/uzBuQHwjjzk
+
+## Korean–English MC at the blockchain event <BlockFesta>
 정보: 2026 · BlockFesta
 분류: Hosting
-링크: 
+링크: https://youtu.be/UyEs4hIGb1c
 
-## Market update presenter
+## Market update caster on business TV
 정보: 2025 · Business TV
 분류: Economic commentary
 링크: https://youtu.be/g-n6Vk50I5E
 
-## Host of the interview show <Hi-Jobs>
+## MC of the career-interview series <Hi-Jobs>
 정보: 2024 · HD Hyundai Heavy Industries
 분류: Hosting
 링크: https://youtu.be/9oEcVe2R9Yw
@@ -37,12 +42,7 @@
 분류: Narration
 링크: https://youtu.be/umEZCZCs6xU
 
-## Documentary voice-over
-정보: 2024 · HD Hyundai Heavy Industries
+## Economics podcast <MoneySleep>
+정보: 2026 · HYEDLINE
 분류: Narration
-링크: https://youtu.be/cPXfMhaBB1s?t=35
-
-## MC of a live health information show
-정보: 2022 · Law TV
-분류: Hosting
-링크: https://youtu.be/ZKmZtmLpA70
+링크: https://youtu.be/EMghVf80AT4

@@ -1,14 +1,14 @@
 # Currently
 영문: Now
 
-## KBS Chungju — Economics correspondent
+## KBS Chungju — Economics Correspondent
 기간: Jul 2026 —
-설명: In the radio segment “Economics in a Word,” I unpack the news through one key term.
+설명: In the radio segment “Economics in a Word,” I break down economic issues in plain terms.
 
-## Block Media — Reporter
+## Block Media — Foreign News Reporter
 기간: Aug 2026 —
-설명: Covering digital assets and global markets, translating foreign news into Korean reports.
+설명: I cover digital assets and global markets, translating foreign news into Korean articles.
 
-## HYEDLINE on YouTube
+## YouTube <HYEDLINE>
 기간: Ongoing
-설명: My own channel explaining economic news and foreign press in plain Korean.
+설명: My own channel explaining economic news in plain language, planned and produced by me.
