@@ -5,6 +5,7 @@
   --paper:#FAFAF7; --ink:#111214; --ink-2:#4B4E57; --ink-3:#7C808A;
   --rule:#E2E1DB; --panel:#F1F0EB; --thumb:#DCDBD4;
   --cobalt:#2348C9; --cobalt-tint:#E8EDFB; --on-cobalt:#FFFFFF;
+  --onair:#D93A2B; --onair-tint:#F9DEDA;
   --font-body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
   --font-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
   --wrap:1080px;
@@ -12,11 +13,11 @@
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --paper:#0F1013; --ink:#F2F2EF; --ink-2:#B6B8BF; --ink-3:#868A94;
   --rule:#2A2C33; --panel:#17191E; --thumb:#24262D;
-  --cobalt:#6E8DF5; --cobalt-tint:#1A2245; --on-cobalt:#0B0F22; color-scheme:dark}}
+  --cobalt:#6E8DF5; --cobalt-tint:#1A2245; --on-cobalt:#0B0F22; --onair:#FF6B5C; --onair-tint:#3A1A17; color-scheme:dark}}
 :root[data-theme="dark"]{
   --paper:#0F1013; --ink:#F2F2EF; --ink-2:#B6B8BF; --ink-3:#868A94;
   --rule:#2A2C33; --panel:#17191E; --thumb:#24262D;
-  --cobalt:#6E8DF5; --cobalt-tint:#1A2245; --on-cobalt:#0B0F22; color-scheme:dark}
+  --cobalt:#6E8DF5; --cobalt-tint:#1A2245; --on-cobalt:#0B0F22; --onair:#FF6B5C; --onair-tint:#3A1A17; color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
@@ -28,11 +29,16 @@ a{color:inherit}
 .eyebrow{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;color:var(--cobalt);text-transform:uppercase}
 
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--paper);border-bottom:1px solid var(--rule)}
-header.top .wrap{display:flex;align-items:center;justify-content:flex-end;padding-block:14px}
+header.top .wrap{display:flex;align-items:center;justify-content:flex-end;gap:24px;padding-block:14px}
+.lang{display:flex;border:1px solid var(--rule);border-radius:4px;overflow:hidden;flex-shrink:0}
+.lang a{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-decoration:none;color:var(--ink-3);padding:4px 9px;line-height:1.4}
+.lang a:hover{color:var(--cobalt)}
+.lang a[aria-current="page"]{background:var(--ink);color:var(--paper)}
 nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
 nav a{text-decoration:none;font-size:14px;color:var(--ink-2)}
 nav a:hover{color:var(--cobalt)}
-@media (max-width:640px){nav ul{gap:14px}nav a{font-size:13px}}
+@media (max-width:640px){nav ul{gap:12px}nav a{font-size:13px}header.top .wrap{gap:12px}}
+@media (max-width:400px){nav ul{gap:9px}nav a{font-size:12.5px}.lang a{padding:3px 7px}}
 
 .hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:56px;align-items:center;padding-block:56px 64px}
 .hero h1{font-size:clamp(44px,7.5vw,80px);line-height:1.05;letter-spacing:-.04em;font-weight:700;margin:0}
@@ -145,3 +151,35 @@ footer .wrap{padding-block:24px;font-size:13px;color:var(--ink-3)}
 .reveal-ready .rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
 .reveal-ready .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.reveal-ready .rv{opacity:1;transform:none;transition:none}}
+
+/* ---------- ON AIR 표시 ---------- */
+.onair{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;color:var(--onair);font-weight:500;white-space:nowrap}
+.onair i{width:8px;height:8px;border-radius:50%;background:var(--onair);box-shadow:0 0 0 3px var(--onair-tint);animation:tally 2.4s ease-in-out infinite}
+.onair.off{color:var(--ink-3)}
+.onair.off i{background:var(--ink-3);box-shadow:none;animation:none}
+.onair.sm{display:flex;margin-top:6px;font-size:10.5px}
+@keyframes tally{0%,100%{opacity:1}50%{opacity:.35}}
+.now-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.now-card.is-off{background:transparent;border-style:dashed}
+.now-card.is-off h3,.now-card.is-off p{color:var(--ink-3)}
+
+/* ---------- 숫자 띠 기준 연도 ---------- */
+.facts .wrap.facts-note{display:block;text-align:right;font-family:var(--font-mono);font-size:11.5px;color:var(--ink-3);padding-block:0 12px;margin-top:-6px}
+
+/* ---------- 문의 안내 ---------- */
+.tips{margin-top:28px;padding:18px 20px;border:1px dashed var(--ink-3);border-radius:6px;font-size:14px;line-height:1.7}
+.tips b{display:block;margin-bottom:6px;font-weight:500}
+.tips ul{margin:0;padding:0;list-style:none}
+.tips li::before{content:"· ";color:var(--cobalt)}
+
+/* ---------- 휴대폰 하단 고정 버튼 ---------- */
+.dock{display:none}
+@media (max-width:760px){
+  .dock{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--paper);border-top:1px solid var(--rule);
+    padding-top:10px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+    transition:transform .35s ease}
+  .dock .btn{flex:1;justify-content:center;padding:12px 10px}
+  .dock.away{transform:translateY(110%)}
+  body.has-dock footer .wrap{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+}
+@media (prefers-reduced-motion:reduce){.onair i{animation:none}}
